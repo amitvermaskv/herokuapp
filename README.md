@@ -1,4 +1,4 @@
-# The Internet - HeroKuApp
+# The Internet - HeroKuApp   [![build and test](https://github.com/amitvermaskv/herokuapp/actions/workflows/build-test.yml/badge.svg)](https://github.com/amitvermaskv/herokuapp/actions/workflows/build-test.yml)
 ## _Add/Remove Elements UI Test_
 
 This repository contains UI test for
