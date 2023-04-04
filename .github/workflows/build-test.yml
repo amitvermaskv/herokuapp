@@ -33,4 +33,10 @@ jobs:
       run: dotnet build ./TheInternetHeroKuApp.Tests/TheInternetHeroKuApp.Tests.sln --configuration Release --no-restore
     
     - name: Test
-      run: dotnet test ./TheInternetHeroKuApp.Tests/TheInternetHeroKuApp.Tests.sln --configuration Release --no-restore --no-build --verbosity normal
+      run: dotnet test ./TheInternetHeroKuApp.Tests/TheInternetHeroKuApp.Tests.sln --configuration Release --no-restore --no-build --verbosity normal --logger "trx;LogFileName=testresult.trx"
+
+    - name: Publish Test Results
+      uses: EnricoMi/publish-unit-test-result-action/composite@v2
+      if: always()
+      with:
+        files: "/TestResults/testresult.trx"
